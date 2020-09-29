@@ -4,9 +4,9 @@ public class Node {
     private int value;
     private boolean visited;
 
-    public Node(int va,boolean vi ){
+    public Node(int va ){
         value = va;
-        visited = vi;
+
     }
 
     public void visit(){
@@ -21,7 +21,7 @@ public class Node {
         return value;
     }
 
-    public boolean getvisit(){
+    public boolean getvisited(){
         return visited;
     }
 
@@ -29,9 +29,6 @@ public class Node {
         value = va;
     }
 
-    public void setvisit(boolean v){
-        visited = v;
-    }
 
 
 }
