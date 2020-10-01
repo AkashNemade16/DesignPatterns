@@ -3,7 +3,7 @@ package Lab3;
 import java.util.LinkedList;
 import java.util.List;
 
-public class RealGraphTraversor {
+public class RealGraphTraversor implements GraphTraversor{
     LinkedList<Node> nodes;//initializing global List
 
     public List<Node> DFS_traversing(Node start, Graph g){
