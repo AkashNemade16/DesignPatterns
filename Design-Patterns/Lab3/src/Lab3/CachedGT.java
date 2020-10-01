@@ -4,7 +4,7 @@ package Lab3;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CachedGT implements GraphTraversor{
+public class CachedGT implements GraphTraversor {
     private GraphTraversor service;
     private List<Node> cache = new LinkedList<>();
     private List<Node> cacheWFS = new LinkedList<>();
