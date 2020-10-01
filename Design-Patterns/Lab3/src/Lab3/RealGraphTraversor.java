@@ -28,8 +28,31 @@ public class RealGraphTraversor {
     }
 
     public List<Node> WFS_traversing(Node start, Graph g){
-       return null;
+        nodes = new LinkedList<>();
+        System.out.println("WFS begins at"+ start +":");
+        g.resetNodesVisited();
+        nodes.add(start);
+        WFS(start,g);
+        return nodes;
     }
 
+    private void WFS(Node present, Graph g){
+        LinkedList<Node> neighbours = g.getNeighbors(present);
+        List <Node> toVisit = new LinkedList<>();
+
+        if(neighbours!=null){
+            for(Node node : neighbours){
+                if(!node.getvisited()){
+                    node.visit();
+                    nodes.add(node);
+                    toVisit.add(node);
+                }
+            }
+        }
+
+        for (Node node : toVisit) {
+            WFS(node, g);
+        }
+    }
 
 }
