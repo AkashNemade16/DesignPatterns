@@ -8,6 +8,6 @@ public class BeginnerWeapon implements Weapon{
     }
 
     public String getWeapon() {
-        return "The Weapon is" +this.name;
+        return "The Weapon is " +this.name;
     }
 }

@@ -8,6 +8,6 @@ public class AdvancedCharacter implements Character{
     }
 
     public String getCharacter(){
-        return "The Character is"+this.name;
+        return "The Character is "+this.name;
     }
 }
