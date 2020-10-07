@@ -1,4 +1,17 @@
 package lab4;
 
-public class AdvancedMode {
+public class AdvancedMode implements Modes{
+    @Override
+    public Character createCharacter(){
+        String add = "New Character of Advanced mode added";
+        System.out.println(add);
+        return new AdvancedCharacter();
+    }
+
+    @Override
+    public Weapon createWeapons() {
+        String add = "New Weapon of Advanced mode added";
+        System.out.println(add);
+        return new AdvancedWeapon();
+    }
 }

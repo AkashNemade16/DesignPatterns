@@ -1,7 +1,7 @@
 package lab4;
 
-public interface Modes {
-    public Weapon createWeapons();
-    public Character createCharacter();
+public abstract interface Modes {
+    public abstract Weapon createWeapons();
+    public abstract Character createCharacter();
 
 }
