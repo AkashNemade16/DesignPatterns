@@ -83,4 +83,27 @@ public class ObjectPool implements ObjectPool_IF {
             }
         }
     }
+    private Object removeObject() {
+        size--;
+        return pool[size];
+    }
+
+    public void release(Object o) {
+        if (o == null) {
+            throw new NullPointerException();
+        }
+        synchronized (lockObject) {
+            if (getSize() < getCapacity()) {
+                pool[size] = o;
+                size++;
+                lockObject.notify();
+            }
+        }
+    }
+
+    private Object createObject() {
+        Object newObject = c.create();
+        instanceCount++;
+        return newObject;
+    }
 }
