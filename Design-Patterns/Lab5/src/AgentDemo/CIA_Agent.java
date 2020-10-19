@@ -1,7 +1,7 @@
 package AgentDemo;
-
+import static java.lang.Thread.sleep;
 public interface CIA_Agent {
-    import static java.lang.Thread.sleep;
+
     public class CIA_Agent extends Object {
         private boolean working;
         int i;
