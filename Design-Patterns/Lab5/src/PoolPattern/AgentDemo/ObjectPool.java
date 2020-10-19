@@ -44,13 +44,43 @@ public class ObjectPool implements ObjectPool_IF {
 
     public void setCapacity(int c) {
         if (c <= 0) {
-            String msg = "Capacity must be greater than zero";
+            String msg = "Capacity should be greater than zero";
             throw new IllegalArgumentException(msg);
         }
         synchronized (lockObject) {
             Object[] newPool = new Object[c];
             System.arraycopy(pool, 0, newPool, 0, c);
             pool = newPool;
+        }
+    }
+    public Object getObject() {
+        synchronized (lockObject) {
+            if (size > 0) {
+                return removeObject();
+            }
+            else if (getInstanceCount() < getMaxInstances()) {
+                return createObject();
+            }
+            else{
+                return null;
+            }
+        }
+    }
+    public Object waitForObject() throws InterruptedException {
+        synchronized (lockObject) {
+            if (getInstanceCount() < getMaxInstances()) {
+                return createObject();
+            }
+            else if (size > 0) {
+                return removeObject();
+            }
+            else {
+                do {
+                    wait();
+                }
+                while (size <= 0);
+                return removeObject();
+            }
         }
     }
 }
