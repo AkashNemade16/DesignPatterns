@@ -1,7 +1,5 @@
 package AgentDemo;
 import static java.lang.Thread.sleep;
-public interface CIA_Agent {
-
     public class CIA_Agent extends Object {
         private boolean working;
         int i;
@@ -33,12 +31,14 @@ public interface CIA_Agent {
             } catch (InterruptedException ex) {
             }
         }
+
         public synchronized void start() {
             this.working = true;
         }
+
         public synchronized void stop() {
             this.working = false;
         }
     }
 
-}
+

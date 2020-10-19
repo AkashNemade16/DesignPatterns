@@ -1,5 +1,5 @@
 package AgentDemo;
-import AgentDemo.PoolPattern.ObjectPool;
+import PoolPattern.AgentDemo.ObjectPool;
 import static java.lang.Thread.sleep;
 public class TaskRequester {
     private int id;

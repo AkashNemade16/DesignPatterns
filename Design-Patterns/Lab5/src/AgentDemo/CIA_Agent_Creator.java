@@ -1,6 +1,6 @@
 package AgentDemo;
-import AgentDemo.PoolPattern.ObjectCreation_IF;
-public interface CIA_Agent_Creator {
+import PoolPattern.AgentDemo.ObjectCreation_IF;
+
 
     public class CIA_Agent_Creator implements ObjectCreation_IF{
         private String[] footprints = {"@", "#", "$", "*", ".","?"};
@@ -10,4 +10,4 @@ public interface CIA_Agent_Creator {
             return agent;
         }
     }
-}
+
