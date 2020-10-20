@@ -1,6 +1,6 @@
 package AgentDemo;
 import static java.lang.Thread.sleep;
-public class FBI_Agent implements Runnable {
+public class FBI_Agent implements Agent_IF,Runnable {
     private boolean working;
     int i;
     String Footprint;
@@ -32,15 +32,15 @@ public class FBI_Agent implements Runnable {
         }
     }
 
-    public synchronized void start() {
+
+    @Override
+    public synchronized void startTask() {
         this.working = true;
     }
 
-    public synchronized void stop() {
+    @Override
+    public synchronized void stopTask() {
         this.working = false;
     }
-
-
-
 }
 

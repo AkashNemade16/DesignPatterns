@@ -1,8 +1,7 @@
 package AgentDemo;
 import static java.lang.Thread.sleep;
-    public class CIA_Agent implements Runnable{
+    public class CIA_Agent implements Agent_IF,Runnable{
         private boolean working;
-        int i;
         String footprint;
         private TaskRequester t;
         public CIA_Agent(String footprint) {
@@ -32,11 +31,14 @@ import static java.lang.Thread.sleep;
             }
         }
 
-        public synchronized void start() {
+
+        @Override
+        public synchronized void startTask() {
             this.working = true;
         }
 
-        public synchronized void stop() {
+        @Override
+        public synchronized void stopTask() {
             this.working = false;
         }
     }

@@ -12,7 +12,7 @@ public class CIA_AgentApp {
             TaskRequester t = new TaskRequester(i);
             list.add(t);
         }
-        System.out.println("Testing CIA Agent pool");
+        System.out.println("CIA Agent pool Test");
         int index = 0;
         TaskRequester t = list.get(index);
         while (t != null && index < list.size()) {

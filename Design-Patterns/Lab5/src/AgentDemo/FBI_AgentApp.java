@@ -2,9 +2,9 @@ package AgentDemo;
 import PoolPattern.AgentDemo.ObjectPool;
 import java.util.ArrayList;
 public class FBI_AgentApp {
-    public static void main(String arg[]) throws InterruptedException {
+    public static void main(String arg[]){
         FBI_Agent_Creator creator = new FBI_Agent_Creator();
-        ObjectPool CIA = ObjectPool.getPoolInstance(creator, 6);
+        ObjectPool FBI = ObjectPool.getPoolInstance(creator, 6);
         ArrayList<TaskRequester> list = new ArrayList();
         for (int i = 1; i < 13; i++) {
             TaskRequester t = new TaskRequester(i);
@@ -15,7 +15,7 @@ public class FBI_AgentApp {
         TaskRequester t = list.get(index);
         while (t != null && index < list.size()) {
             try {
-                FBI_Agent agent = (FBI_Agent) CIA.waitForObject();
+                FBI_Agent agent = (FBI_Agent) FBI.waitForObject();
                 t = list.get(index);
                 index++;
                 if (t != null) {
@@ -25,7 +25,7 @@ public class FBI_AgentApp {
                     Thread t1 = new Thread(() -> {
                         try {
                             Thread.sleep(1000);
-                            CIA.release(agent);
+                            FBI.release(agent);
                         } catch (InterruptedException ex) {
                         }
                     });

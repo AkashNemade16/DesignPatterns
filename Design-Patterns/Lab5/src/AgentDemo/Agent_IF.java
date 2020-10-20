@@ -6,9 +6,6 @@ public interface Agent_IF {
     public class TaskID {
         private int id;
 
-    public TaskID(int id) {
-        this.id = id;
-    }
     public void setTaskID(int id) {
         this.id = id;
     }
