@@ -3,7 +3,7 @@ package AgentDemo;
 public interface Agent_IF {
     void startTask();
     void stopTask();
-    public class TaskID {
+    class TaskID {
         private int id;
 
     public void setTaskID(int id) {
