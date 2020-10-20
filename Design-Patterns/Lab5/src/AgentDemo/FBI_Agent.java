@@ -1,6 +1,6 @@
 package AgentDemo;
 import static java.lang.Thread.sleep;
-public abstract class FBI_Agent implements Agent_IF,Runnable {
+public class FBI_Agent implements Runnable {
     private boolean working;
     int i;
     String Footprint;
@@ -18,32 +18,29 @@ public abstract class FBI_Agent implements Agent_IF,Runnable {
     public void run() {
         try {
             sleep(100);
-            System.out.println("Agent " + Footprint + " is working on task " + getTask().getID());
+            System.out.println("Agent " + Footprint + " is performing task " + getTask().getID());
         } catch (InterruptedException ex) {
         }
     }
     public void done(){
         try {
             sleep(100);
-            System.out.println("Agent " + Footprint + " is done working on task " + getTask().getID());
-        } catch (InterruptedException ex) {
+            System.out.println("Agent " + Footprint + " has completed task " + getTask().getID());
+        }
+        catch (InterruptedException ex) {
+
         }
     }
+
     public synchronized void start() {
         this.working = true;
     }
+
     public synchronized void stop() {
         this.working = false;
     }
 
-//    @Override
-//    public void startTask() {
-//
-//    }
-//
-//    @Override
-//    public void stopTask() {
-//
-//    }
+
+
 }
 

@@ -1,6 +1,6 @@
 package AgentDemo;
 import static java.lang.Thread.sleep;
-    public class CIA_Agent extends Object {
+    public class CIA_Agent implements Runnable{
         private boolean working;
         int i;
         String footprint;
@@ -14,10 +14,10 @@ import static java.lang.Thread.sleep;
         public TaskRequester getTask() {
             return t;
         }
-        public void run() throws InterruptedException {
+        public void run(){
             try {
                 sleep(100);
-                System.out.println("Agent " + footprint + " is working on task " + getTask().getID());
+                System.out.println("Agent " + footprint + " is performing task " + getTask().getID());
             } catch (InterruptedException ex) {
             }
         }
@@ -26,7 +26,7 @@ import static java.lang.Thread.sleep;
         {
             try {
                 sleep(100);
-                System.out.println("Agent " + footprint + " is done working on task " +
+                System.out.println("Agent " + footprint + " is completed task " +
                         getTask().getID());
             } catch (InterruptedException ex) {
             }

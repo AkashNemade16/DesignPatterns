@@ -10,7 +10,7 @@ public class FBI_AgentApp {
             TaskRequester t = new TaskRequester(i);
             list.add(t);
         }
-        System.out.println("Testing FBI Agent pool");
+        System.out.println("FBI Agent pool");
         int index = 0;
         TaskRequester t = list.get(index);
         while (t != null && index < list.size()) {
