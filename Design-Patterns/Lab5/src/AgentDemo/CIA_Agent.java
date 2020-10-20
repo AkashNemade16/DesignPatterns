@@ -16,7 +16,7 @@ import static java.lang.Thread.sleep;
         public void run(){
             try {
                 sleep(100);
-                System.out.println("Agent " + footprint + " is performing task " + getTask().getID());
+                System.out.println("CIA Agent " + footprint + " is performing task " + getTask().getID());
             } catch (InterruptedException ex) {
             }
         }
@@ -25,7 +25,7 @@ import static java.lang.Thread.sleep;
         {
             try {
                 sleep(100);
-                System.out.println("Agent " + footprint + " is completed task " +
+                System.out.println("CIA Agent " + footprint + " is completed task " +
                         getTask().getID());
             } catch (InterruptedException ex) {
             }

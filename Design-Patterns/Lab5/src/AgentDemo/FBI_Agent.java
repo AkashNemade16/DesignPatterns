@@ -18,14 +18,14 @@ public class FBI_Agent implements Agent_IF,Runnable {
     public void run() {
         try {
             sleep(100);
-            System.out.println("Agent " + Footprint + " is performing task " + getTask().getID());
+            System.out.println("FBI Agent " + Footprint + " is performing task " + getTask().getID());
         } catch (InterruptedException ex) {
         }
     }
     public void done(){
         try {
             sleep(100);
-            System.out.println("Agent " + Footprint + " has completed task " + getTask().getID());
+            System.out.println("FBI Agent " + Footprint + " has completed task " + getTask().getID());
         }
         catch (InterruptedException ex) {
 
