@@ -20,11 +20,11 @@ package lab7;
         }
 
         @Override
-        public int getCharLength() {
+        public int getCharLen() {
             return string.length();
         }
 
         public int getElementCount(){ return 0; }
-        public void displayChildren(String x){ }
+        public void ShowChildren(String x){ }
     }
 

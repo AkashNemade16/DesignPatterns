@@ -2,16 +2,16 @@ package lab7;
 
 abstract class AbtractNovel implements NovelComponentIF {
 
-    private NovelComposite parent;
-    private String name;
+    private NovelCompositeComponent parent;
+    private String Name;
 
     @Override
-    public NovelComposite getParent() {
+    public NovelCompositeComponent getParent() {
         return parent;
     }
 
-    public void setParent(NovelComposite p){
-        this.parent = p;
+    public void setParent(NovelCompositeComponent pa){
+        this.parent = pa;
     }
 
     @Override
@@ -19,11 +19,11 @@ abstract class AbtractNovel implements NovelComponentIF {
 
     public abstract String getType();
 
-    @Override
-    public abstract int getCharLength();
+
+    public abstract int getCharLen();
 
     @Override
-    public abstract void displayChildren(String space);
+    public abstract void ShowChildren(String space);
 
     @Override
     public abstract int getElementCount();

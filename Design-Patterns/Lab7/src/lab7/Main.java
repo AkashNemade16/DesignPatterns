@@ -3,8 +3,8 @@ package lab7;
 public class Main {
     public static void main(String[] args) {
 
-        NovelComponentIF book_one = new Novel("Design Pattern");
-        String input = "Design an archive system to store novels. A novel can have many pages. Within a page, there can be several columns and frames. A column can contain frames, so can a frame contain columns. Moreover, multiple images may be seen in a column or frame. A column is very likely to contain several lines of text, which can be a combination of characters and images. The Novel class and its entity classes provide methods to manipulate contents such as set(), get(), remove(). A UML class diagram is shown below that depicts many composition relationships. Please re-design it into a hierarchical representation to improve quality." +
+        NovelComponentIF book_one = new NovelComponent("Design Pattern");
+        String input = "Design an archive system to store novels. A novel can have many pages. Within a page, there can be several columns and frames. A column can contain frames, so can a frame contain columns. Moreover, multiple images may be seen in a column or frame. A column is very likely to contain several lines of text, which can be a combination of characters and images. The NovelComponent class and its entity classes provide methods to manipulate contents such as set(), get(), remove(). A UML class diagram is shown below that depicts many composition relationships. Please re-design it into a hierarchical representation to improve quality." +
                 "- I\n" +
                 "really believe he is Antichrist - I will have nothing more\n" +
                 "to do with you and you are no longer my friend, no longer\n" +
@@ -24,20 +24,20 @@ public class Main {
         ((Column) column_left_one).addChild(text);
         ((Page) page_one).addChild(column_left_one);
         ((Page) page_one).addChild(column_right_one);
-        ((Novel) book_one).addChild(page_one);
-        ((Novel) book_one).addChild(page_two);
+        ((NovelComponent) book_one).addChild(page_one);
+        ((NovelComponent) book_one).addChild(page_two);
 
-        int len = book_one.getCharLength();
+        int len = book_one.getCharLen();
         System.out.println(book_one.getType()+" : <<"+ book_one.getName()+">> has char : " + len);
 
         int count = book_one.getElementCount();
         System.out.println(book_one.getType()+" : <<"+ book_one.getName()+ ">> has total" + count + " elements");
 
         System.out.println("including: ");
-        book_one.displayChildren("");
+        book_one.ShowChildren("");
 
         System.out.println("--------------------------------------------");
-        NovelComponentIF book_two = new Novel("STEVE JOBS");
+        NovelComponentIF book_two = new NovelComponent("STEVE JOBS");
         String input2 = "When Paul Jobs was mustered out of the Coast Guard after World War II, he made \n" +
                 "a wager with his crewmates.\n" +
                 "They had arrived in San Francisco, where their ship \n" +
@@ -63,13 +63,13 @@ public class Main {
         ((Page) page_b).addChild(column_one);
         ((Page) page_b).addChild(column_two);
         ((Page) page_b).addChild(column_three);
-        ((Novel) book_two).addChild(page_a);
-        ((Novel) book_two).addChild(page_b);
+        ((NovelComponent) book_two).addChild(page_a);
+        ((NovelComponent) book_two).addChild(page_b);
         int count_2 = book_two.getElementCount();
         System.out.println(book_two.getType()+" : <<"+ book_two.getName()+ ">> totally has " + count_2 + " elements");
 
         System.out.println("including: ");
-        book_two.displayChildren("");
+        book_two.ShowChildren("");
     }
 }
 

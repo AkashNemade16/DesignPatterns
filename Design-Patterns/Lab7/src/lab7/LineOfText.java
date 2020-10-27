@@ -1,16 +1,16 @@
 package lab7;
 
-public class LineOfText extends NovelComposite {
-    private String type = "LineOfText";
-    private String name;
+public class LineOfText extends NovelCompositeComponent {
+    private String Type = "LineOfText";
+    private String Name;
 
-    public LineOfText(String name){
-        this.name = name;
+    public LineOfText(String Name){
+        this.Name = Name;
     }
     public String getName(){
-        return name;
+        return Name;
     }
     public String getType(){
-        return type;
+        return Type;
     }
 }

@@ -1,11 +1,11 @@
 package lab7;
 
-public class Novel extends NovelComposite {
+public class NovelComponent extends NovelCompositeComponent {
     //do something
-    private String type = "Novel";
+    private String type = "NovelComponent";
     private String name;
 
-    public Novel(String name){
+    public NovelComponent(String name){
         this.name = name;
     }
 

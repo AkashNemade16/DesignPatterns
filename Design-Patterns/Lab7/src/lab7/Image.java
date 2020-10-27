@@ -13,9 +13,9 @@ public class Image extends AbtractNovel {
     public String getType(){
         return type;
     }
-    public int getCharLength(){
+    public int getCharLen(){
         return 1;
     }
     public int getElementCount(){ return 0; }
-    public void displayChildren(String x){}
+    public void ShowChildren(String x){}
 }

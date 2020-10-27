@@ -1,19 +1,19 @@
 package lab7;
 
-public class Column extends NovelComposite {
+public class Column extends NovelCompositeComponent {
 
-    private String type = "Column";
-    private String name;
+    private String Type = "Column";
+    private String Name;
 
-    public Column(String name){
-        this.name = name;
+    public Column(String Name){
+        this.Name = Name;
     }
 
     public String getName(){
-        return name;
+        return Name;
     }
 
     public String getType(){
-        return type;
+        return Type;
     }
 }

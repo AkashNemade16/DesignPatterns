@@ -1,18 +1,18 @@
 package lab7;
 
-public class Frame extends NovelComposite {
-    private String type = "Frame";
-    private String name;
+public class Frame extends NovelCompositeComponent {
+    private String Type = "Frame";
+    private String Name;
 
-    public Frame(String name){
-        this.name = name;
+    public Frame(String Name){
+        this.Name = Name;
     }
 
     public String getName(){
-        return name;
+        return Name;
     }
 
     public String getType(){
-        return type;
+        return Type;
     }
 }

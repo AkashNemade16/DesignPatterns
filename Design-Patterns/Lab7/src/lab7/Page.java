@@ -1,18 +1,18 @@
 package lab7;
 
-public class Page extends NovelComposite {
-    private String type = "Page";
-    private String name;
+public class Page extends NovelCompositeComponent {
+    private String Type = "Page";
+    private String Name;
 
-    public Page(String name){
-        this.name = name;
+    public Page(String Name){
+        this.Name = Name;
     }
 
     public String getName(){
-        return name;
+        return Name;
     }
 
     public String getType(){
-        return type;
+        return Type;
     }
 }
