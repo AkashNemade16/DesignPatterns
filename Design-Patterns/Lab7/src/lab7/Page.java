@@ -1,6 +1,6 @@
 package lab7;
 
-public class Page extends NovelCompositeElement {
+public class Page extends NovelComposite {
     private String type = "Page";
     private String name;
 

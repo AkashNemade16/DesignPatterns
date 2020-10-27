@@ -3,24 +3,24 @@ package lab7;
 
     import java.util.ArrayList;
 
-    public abstract class NovelCompositeElement extends AbtractNovelElement{
+    public abstract class NovelComposite extends AbtractNovel {
 
-        private ArrayList<NovelElementIF> children = new ArrayList();
+        private ArrayList<NovelComponentIF> children = new ArrayList();
         private int cachedCharLength = -1;
 
-        public NovelElementIF getChild(int index){
-            return (NovelElementIF)children.get(index);
+        public NovelComponentIF getChild(int index){
+            return (NovelComponentIF)children.get(index);
         }
 
-        public synchronized void addChild(NovelElementIF child){
+        public synchronized void addChild(NovelComponentIF child){
             synchronized (child){
                 children.add(child);
-                ((AbtractNovelElement)child).setParent(this);
+                ((AbtractNovel)child).setParent(this);
                 changeNotification();
             }
         }
 
-        public synchronized void removeChild(AbtractNovelElement child){
+        public synchronized void removeChild(AbtractNovel child){
             synchronized (child){
                 if(this == child.getParent()){
                     child.setParent(null);
@@ -40,8 +40,8 @@ package lab7;
         public int getCharLength(){
             int len = 0;
             for(int i = 0 ; i < children.size(); i++){
-                AbtractNovelElement thisChild;
-                thisChild = (AbtractNovelElement)children.get(i);
+                AbtractNovel thisChild;
+                thisChild = (AbtractNovel)children.get(i);
                 len += thisChild.getCharLength();
             }
             return len;
@@ -52,8 +52,8 @@ package lab7;
             ans.append(space);
 
             for(int i = 0 ; i < children.size(); i++){
-                AbtractNovelElement thisChild;
-                thisChild = (AbtractNovelElement)children.get(i);
+                AbtractNovel thisChild;
+                thisChild = (AbtractNovel)children.get(i);
                 System.out.println(ans + "--"+thisChild.getType()+ "(" + thisChild.getName()+ ")");
                 String x = ans.toString();
                 thisChild.displayChildren(x);
@@ -63,8 +63,8 @@ package lab7;
         public int getElementCount(){
             int count = children.size();
             for(int i = 0 ; i < children.size(); i++){
-                AbtractNovelElement thisChild;
-                thisChild = (AbtractNovelElement) children.get(i);
+                AbtractNovel thisChild;
+                thisChild = (AbtractNovel) children.get(i);
                 count += thisChild.getElementCount();
             }
             return count;

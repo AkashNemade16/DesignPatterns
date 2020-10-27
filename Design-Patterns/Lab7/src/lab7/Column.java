@@ -1,6 +1,6 @@
 package lab7;
 
-public class Column extends NovelCompositeElement {
+public class Column extends NovelComposite {
 
     private String type = "Column";
     private String name;

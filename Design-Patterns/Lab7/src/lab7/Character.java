@@ -1,6 +1,6 @@
 package lab7;
 
-    public class Character extends AbtractNovelElement {
+    public class Character extends AbtractNovel {
 
         private String string;
         private String name;

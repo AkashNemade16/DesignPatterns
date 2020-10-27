@@ -1,6 +1,6 @@
 package lab7;
 
-public class LineOfText extends NovelCompositeElement {
+public class LineOfText extends NovelComposite {
     private String type = "LineOfText";
     private String name;
 

@@ -1,16 +1,16 @@
 package lab7;
 
-abstract class AbtractNovelElement implements NovelElementIF {
+abstract class AbtractNovel implements NovelComponentIF {
 
-    private NovelCompositeElement parent;
+    private NovelComposite parent;
     private String name;
 
     @Override
-    public NovelCompositeElement getParent() {
+    public NovelComposite getParent() {
         return parent;
     }
 
-    public void setParent(NovelCompositeElement p){
+    public void setParent(NovelComposite p){
         this.parent = p;
     }
 

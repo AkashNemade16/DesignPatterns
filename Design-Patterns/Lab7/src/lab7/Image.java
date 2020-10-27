@@ -1,6 +1,6 @@
 package lab7;
 
-public class Image extends AbtractNovelElement {
+public class Image extends AbtractNovel {
     private String name;
     private String type = "Image";
 

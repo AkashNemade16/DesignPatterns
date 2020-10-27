@@ -1,8 +1,8 @@
 package lab7;
 
 
-    public interface NovelElementIF {
-        public NovelCompositeElement getParent();
+    public interface NovelComponentIF {
+        public NovelComposite getParent();
         public int getCharLength();
         public void displayChildren(String space);
         public int getElementCount();

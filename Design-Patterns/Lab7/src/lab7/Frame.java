@@ -1,6 +1,6 @@
 package lab7;
 
-public class Frame extends NovelCompositeElement {
+public class Frame extends NovelComposite {
     private String type = "Frame";
     private String name;
 
