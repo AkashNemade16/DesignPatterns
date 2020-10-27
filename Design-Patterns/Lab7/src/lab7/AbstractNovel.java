@@ -23,7 +23,7 @@ abstract class AbtractNovel implements NovelComponentIF {
     public abstract int getCharLen();
 
     @Override
-    public abstract void ShowChildren(String space);
+    public abstract void ShowChildren(String child);
 
     @Override
     public abstract int getElementCount();

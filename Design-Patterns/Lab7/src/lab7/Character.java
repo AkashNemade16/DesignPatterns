@@ -2,13 +2,13 @@ package lab7;
 
     public class Character extends AbtractNovel {
 
-        private String string;
+        private String charac;
         private String name;
         private String type = "Character";
 
-        public Character(String name,String s){
+        public Character(String name,String c){
             this.name = name;
-            string = s;
+            charac = c;
         }
 
         public String getName(){
@@ -21,10 +21,10 @@ package lab7;
 
         @Override
         public int getCharLen() {
-            return string.length();
+            return charac.length();
         }
 
         public int getElementCount(){ return 0; }
-        public void ShowChildren(String x){ }
+        public void ShowChildren(String child){ }
     }
 

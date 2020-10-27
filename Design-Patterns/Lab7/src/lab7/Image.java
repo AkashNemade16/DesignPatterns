@@ -1,21 +1,21 @@
 package lab7;
 
 public class Image extends AbtractNovel {
-    private String name;
-    private String type = "Image";
+    private String Name;
+    private String Type = "Image";
 
-    public Image(String name){
-        this.name = name;
+    public Image(String Name){
+        this.Name = Name;
     }
     public String getName(){
-        return name;
+        return Name;
     }
     public String getType(){
-        return type;
+        return Type;
     }
     public int getCharLen(){
         return 1;
     }
     public int getElementCount(){ return 0; }
-    public void ShowChildren(String x){}
+    public void ShowChildren(String child){}
 }

@@ -47,9 +47,9 @@ package lab7;
             return len;
         }
 
-        public void ShowChildren(String space){
+        public void ShowChildren(String child){
             StringBuilder ans = new StringBuilder("    ");
-            ans.append(space);
+            ans.append(child);
 
             for(int i = 0 ; i < children.size(); i++){
                 AbtractNovel thisChild;
