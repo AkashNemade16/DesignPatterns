@@ -3,13 +3,13 @@ package Lab8;
 import Condiment.Condiment;
 import java.util.Scanner;
 
-public class Cappuccino extends Coffee{
+public class Latte extends Coffee{
 
-    private int cappuccinoPrice=5;
+    private int lattePrice=3;
 
-    private String cappuccino="CAPPUCCINO";
+    private String latte="LATTE";
 
-    public Cappuccino(String name,int price)
+    public Latte(String name,int price)
 
     {
 
@@ -21,7 +21,7 @@ public class Cappuccino extends Coffee{
 
     {
 
-        return cappuccino;
+        return latte;
 
     }
 
@@ -31,13 +31,13 @@ public class Cappuccino extends Coffee{
 
         String input;
 
-        getEnv().setCoffeeType(cappuccino);
+        getEnv().setCoffeeType(latte);
 
         setCondiment(new Condiment());
 
         do{
 
-            System.out.println("Do you want to add condiments: \n0. No \n1.Vanilla\n2.Cream\n3.Chocolate");
+            System.out.println("Do you want to add condiments \n 0. No\n 1.Vanilla\n 2.Cream\n 3.Chocolate\n");
 
             Scanner myObj= new Scanner(System.in); // Create a Scanner object
 
@@ -57,13 +57,14 @@ public class Cappuccino extends Coffee{
 
         getEnv().setPowerLed(1);
 
-        getEnv().setTypeLed(5);
+        getEnv().setTypeLed(3);
 
-        getEnv().setGrindingTime(10);
+        getEnv().setGrindingTime(9);
 
-        getEnv().setTemperature(300);
 
-        getEnv().holdTemperature(3);
+        getEnv().setTemperature(250);
+
+        getEnv().holdTemperature(4);
 
         getEnv().wait(15);
 
@@ -73,11 +74,11 @@ public class Cappuccino extends Coffee{
 
     }
 
-    public int cappuccinoPrice()
+    public int lattePrice()
 
     {
 
-        return cappuccinoPrice;
+        return lattePrice;
 
     }
 
