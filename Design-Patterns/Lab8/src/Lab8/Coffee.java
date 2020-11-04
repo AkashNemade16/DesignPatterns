@@ -4,92 +4,86 @@ import Condiment.Condiment;
 
 public class Coffee {
 
-    private String name;
+private String name;
 
-// private int price;
+private float condimentPrice, totalCost, Cost;
 
-    private float condimentPrice,totalPrice,price;
+private CoffeeMachine env;
 
-    private CoffeeMakingMachineEnv env;
+private Condiment condiment;
 
-    private Condiment condiment;
+public Coffee(String name,float Cost)
 
-    public Coffee(String name,float price)
+{
 
-    {
+this.name=name;
 
-        this.name=name;
+this.Cost = Cost;
 
-        this.price=price;
+}
 
-    }
+public String getName() {
 
-    public String getName() {
+return name;
 
-        return name;
+}
 
-    }
+public float getCost() {
 
-    public float getPrice() {
+return Cost;
 
-        return price;
+}
 
-    }
+public Condiment getCondiment() {
 
-    public Condiment getCondiment() {
+return condiment;
 
-        return condiment;
+}
 
-    }
+public float getCondimentPrice() {
 
-    public float getCondimentPrice() {
+return condimentPrice;
 
-        return condimentPrice;
+}
 
-    }
+public void setCondimentPrice(float condimentPrice) {
 
-    public void setCondimentPrice(float condimentPrice) {
+this.condimentPrice+=condimentPrice;
 
-        this.condimentPrice+=condimentPrice;
+}
 
-    }
+public void setCondiment(Condiment condiment) {
 
-    public void setCondiment(Condiment condiment) {
+this.condiment = condiment;
 
-        this.condiment = condiment;
+}
 
-    }
+public float getTotalCost() {
 
-    public float getTotalPrice() {
+return totalCost;
 
-        return totalPrice;
+}
 
-    }
+public void setTotalCost(float totalCost) {
 
-    public void setTotalPrice(float totalPrice) {
+this.totalCost = totalCost;
 
-        this.totalPrice = totalPrice;
+}
 
-    }
+public void setEnvironment(CoffeeMachine env) {
 
-    public void setEnvironment(CoffeeMakingMachineEnv env) {
+this.env=env;
 
-        this.env=env;
+}
 
-//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+public CoffeeMachine getEnv() {
 
-    }
+return env;
 
-    public CoffeeMakingMachineEnv getEnv() {
+}
 
-        return env;
+public void start()
+{
 
-    }
-
-    public void start()
-
-    {
-
-    }
-
+}
 }

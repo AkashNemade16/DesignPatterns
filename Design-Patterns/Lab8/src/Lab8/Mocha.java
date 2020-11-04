@@ -3,13 +3,14 @@ package Lab8;
 import Condiment.Condiment;
 import java.util.Scanner;
 
-public class Espresso extends Coffee{
 
-private int espressoPrice=4;
+public class Mocha extends Coffee{
 
-private String espresso="ESPRESSO";
+private int mochaPrice=2;
 
-public Espresso(String name,int price)
+private String mocha="MOCHA";
+
+public Mocha(String name,int price)
 
 {
 
@@ -21,7 +22,7 @@ public String getName()
 
 {
 
-return espresso;
+return mocha;
 
 }
 
@@ -31,7 +32,7 @@ public void start()
 
 String input;
 
-getEnv().setCoffeeType(espresso); 
+getEnv().setCoffeeType(mocha);
 
 setCondiment(new Condiment());
 
@@ -39,7 +40,7 @@ do{
 
 System.out.println("Do you want to add condiments \n 0. No\n 1.Vanilla\n 2.Cream\n 3.Chocolate\n");
 
-Scanner myObj= new Scanner(System.in); // Create a Scanner object
+Scanner myObj= new Scanner(System.in); // Create a Scanner object CS 542 Design Pattern and Object-Oriented Analysis
 
 input = myObj.nextLine();
 
@@ -47,7 +48,7 @@ if(input!=null)
 
 {
 
-setCondimentPrice(Float.parseFloat(getCondiment().addCondiment(input)));
+setCondimentPrice((float)Float.parseFloat(getCondiment().addCondiment(input)));
 
 }
 
@@ -56,11 +57,12 @@ setCondimentPrice(Float.parseFloat(getCondiment().addCondiment(input)));
 
 getEnv().setPowerLed(1);
 
-getEnv().setTypeLed(4);
+getEnv().setTypeLed(1);
 
-getEnv().setGrindingTime(10);
 
-getEnv().setTemperature(100);
+getEnv().setGrindingTime(5);
+
+getEnv().setTemperature(200);
 
 getEnv().holdTemperature(5);
 
@@ -70,14 +72,7 @@ getEnv().done();
 
 getEnv().computePrice(this);
 
-} 
-
-public int expressoPrice()
-
-{
-
-return espressoPrice;
-
 }
+
 
 }

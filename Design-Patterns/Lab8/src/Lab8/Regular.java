@@ -3,11 +3,11 @@ package Lab8;
 import Condiment.Condiment;
 import java.util.Scanner;
 
-public class Latte extends Coffee{
+public class Regular extends Coffee{
 
-private String latte="LATTE";
+private String regular="REGULAR";
 
-public Latte(String name,int price)
+public Regular(String name,int price)
 
 {
 
@@ -17,9 +17,9 @@ super(name,price);
 
 public String getName()
 
-{
+{ 
 
-return latte;
+return regular;
 
 }
 
@@ -29,7 +29,7 @@ public void start()
 
 String input;
 
-getEnv().setCoffeeType(latte);
+getEnv().setCoffeeType(regular);
 
 setCondiment(new Condiment());
 
@@ -51,17 +51,15 @@ setCondimentPrice(Float.parseFloat(getCondiment().addCondiment(input)));
 
 }while(!input.equalsIgnoreCase("0"));
 
+getEnv().setPowerLed(1);
 
-getEnv().setPowerLed(1); 
+getEnv().setTypeLed(1);
 
-getEnv().setTypeLed(3);
+getEnv().setGrindingTime(8);
 
-getEnv().setGrindingTime(9);
+getEnv().setTemperature(150);
 
-
-getEnv().setTemperature(250);
-
-getEnv().holdTemperature(4);
+getEnv().holdTemperature(2); 
 
 getEnv().wait(15);
 
