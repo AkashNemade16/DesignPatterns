@@ -37,7 +37,7 @@ setCondiment(new Condiment());
 
 do{
 
-System.out.println("Do you want to add condiments \n 0. No\n 1.Vanilla\n 2.Cream\n 3.Chocolate\n");
+System.out.println("Do you want to add condiments \n 0. No\n 1.Sugar\n 2.Cream\n 3.Milk\n");
 
 Scanner myObj= new Scanner(System.in); // Create a Scanner object
 
