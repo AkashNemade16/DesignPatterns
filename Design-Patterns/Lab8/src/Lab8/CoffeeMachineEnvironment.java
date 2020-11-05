@@ -23,13 +23,13 @@ public class CoffeeMachineEnvironment implements CoffeeMachine {
     @Override
 
     public void setTemperature(int temp) {
-        System.out.println("Setting temperature to "+temp +" F");
+        System.out.println("Temperature is set "+temp +" F");
     }
 
     @Override
 
     public void holdTemperature(int secs) {
-        System.out.println("Holding temperature to "+secs +" seconds");
+        System.out.println("Temperature held to  "+secs +" seconds");
     }
     @Override
 
@@ -70,7 +70,7 @@ public class CoffeeMachineEnvironment implements CoffeeMachine {
     @Override
 
     public void done() {
-        System.out.println("Coffee is ready");
+        System.out.println("There You Go, Coffee is ready");
         setPowerLed(0);
 
     }

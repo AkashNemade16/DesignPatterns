@@ -25,7 +25,7 @@ public void start()
 
 do{
 
-    System.out.println("Do you want to add condiments: \n0. No \n1.Vanilla\n2.Cream\n3.Chocolate");
+    System.out.println("which condiments do you want: \n0. No \n1.Sugar\n2.Cream\n3.Milk");
     Scanner myObj= new Scanner(System.in); // Create a Scanner object
     input = myObj.nextLine();
 
