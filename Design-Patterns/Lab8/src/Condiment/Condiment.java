@@ -1,15 +1,15 @@
 package Condiment;
 
 public class Condiment {
-    private String vanilla=".50";
+    private String sugar =".50";
 
     private String cream=".25";
 
-    private String chocolate="1";
+    private String milk ="1";
 
-    public String getVanilla() {
+    public String getSugar() {
 
-        return vanilla;
+        return sugar;
 
     }
 
@@ -19,9 +19,9 @@ public class Condiment {
 
     }
 
-    public String getChocolate() {
+    public String getMilk() {
 
-        return chocolate;
+        return milk;
 
     }
 
@@ -33,7 +33,7 @@ public class Condiment {
 
         {
 
-            return getVanilla();
+            return getSugar();
 
         }
 
@@ -48,7 +48,7 @@ public class Condiment {
 
         {
 
-            return getChocolate();
+            return getMilk();
 
         }
 

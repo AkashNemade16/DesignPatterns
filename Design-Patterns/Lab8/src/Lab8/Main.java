@@ -83,7 +83,7 @@ order.start();
 
 }while(!name.equals("0"));
 
-System.out.println("**********\n Total Sales");
+System.out.println("\n Total Sales");
 
 env.printTotalSales(); 
 
