@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ScoreBoard
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ScoreBoard\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=score\ lives
+comment1.target=ScoreBoard(int,\ int)
+comment2.params=title\ prefix1\ prefix2\ score\ lives
+comment2.target=void\ makeImage(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int)
+comment2.text=\r\n\ Make\ the\ score\ board\ image.\r\n
+comment3.params=
+comment3.target=void\ act()
+numComments=4
