@@ -1,11 +1,7 @@
 import greenfoot.*;  
 import java.util.*;
 
-/**
- * Write a description of class Blocker here.
- * 
- * @author Saket Relan
- */
+
 public class Blocker extends Component
 {
     private GreenfootImage image1;
@@ -37,7 +33,7 @@ public class Blocker extends Component
        image6.scale(90,90);
        
        randomImage();
-     //  setRotation(90);
+
     }
     /**
      * Act - do whatever the Vehicle wants to do. This method is called whenever
@@ -69,7 +65,7 @@ public class Blocker extends Component
        }
     }
     
-    public void randomImage()
+    public void randomImage()//to get random aliens
     {
        if (Greenfoot.getRandomNumber(15) > 11 && Greenfoot.getRandomNumber(15) <= 14)
        {
@@ -101,7 +97,7 @@ public class Blocker extends Component
     public void check()
     {
         
-     //collided = getOneIntersectingObject(Vehicle.class);
+
         if (collided != null || getY()>=(getWorld().getHeight()-1))
         {
            getWorld().removeObject(this);

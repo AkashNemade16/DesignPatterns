@@ -1,9 +1,4 @@
-/**
- * Write a description of class OngoingGame here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class OngoingGame extends GameState 
 {
      public OngoingGame(MyWorld myWorld) {

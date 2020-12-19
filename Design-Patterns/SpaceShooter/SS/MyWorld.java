@@ -1,10 +1,6 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
-/**
- * Write a description of class MyWorld here.
- * 
- * @author Rohit Maheshwari
- */
+
 public class MyWorld extends World {
     private boolean fastFlag = false;
     private Component component;

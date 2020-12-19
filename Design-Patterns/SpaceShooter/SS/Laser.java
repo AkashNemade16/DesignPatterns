@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Laser here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Laser extends Ammunation
 {
     private GreenfootImage image1;
@@ -23,7 +17,7 @@ public class Laser extends Ammunation
     public void act() 
     {
 
-        //Actor blocker = getOneObjectAtOffset(0, 0, Blocker.class);
+
         Actor blocker = getOneIntersectingObject(Blocker.class);
 
 
